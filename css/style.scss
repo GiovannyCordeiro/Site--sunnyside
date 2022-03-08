@@ -1,5 +1,4 @@
 @import 'reset.scss';
-@import 'mediascreen.scss';
 @import 'colors.scss';
 
 header{
@@ -15,6 +14,9 @@ header{
            max-width: 150px;
            width: 100%;
            max-height: 30px;
+        }
+        div.mobile-menu{
+            display: none;
         }
         ul.list-navegation{
             display: flex;
@@ -40,7 +42,7 @@ header{
         width: 100%;
         display: flex;
         flex-direction: column;
-        background-image: url('/images/desktop/image-header.jpg');
+        background-image: url('/Site--sunnyside/images/desktop/image-header.jpg');
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
@@ -70,6 +72,7 @@ header{
             font-size: 6em;
             letter-spacing: 5px;
             color: #ffff;
+            text-align:center;
         }
 
         #arrow{
@@ -110,7 +113,7 @@ section.main{
             justify-content:center;
 
             h2{
-                font-size: 2.5rem;
+                font-size: 2rem;
                 color:$black;
             }
             p{
@@ -300,4 +303,20 @@ footer{
     }
 }
 
-
+@media screen and (max-width: 1050px){
+    header{
+        nav.navegação{
+            div.mobile-menu{
+                display: block;
+                .line{
+                    width: 30px;
+                    height: 3px;
+                    background-color: white;
+                }
+            }
+            ul.list-navegation{
+                display:none;
+            }
+        }
+    }
+}

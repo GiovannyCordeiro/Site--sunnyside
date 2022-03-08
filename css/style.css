@@ -6,6 +6,10 @@
           box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 a {
   text-decoration: none;
 }
@@ -36,6 +40,10 @@ header nav.navegação img {
   max-width: 150px;
   width: 100%;
   max-height: 30px;
+}
+
+header nav.navegação div.mobile-menu {
+  display: none;
 }
 
 header nav.navegação ul.list-navegation {
@@ -71,7 +79,7 @@ header .content-header {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background-image: url("/images/desktop/image-header.jpg");
+  background-image: url("/Site--sunnyside/images/desktop/image-header.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -123,6 +131,7 @@ header .content-header h2 {
   font-size: 6em;
   letter-spacing: 5px;
   color: #ffff;
+  text-align: center;
 }
 
 header .content-header #arrow {
@@ -173,7 +182,7 @@ section.main .container .content-text {
 }
 
 section.main .container .content-text h2 {
-  font-size: 2.5rem;
+  font-size: 2rem;
   color: #313334;
 }
 
@@ -419,5 +428,19 @@ footer .container .icons a {
 
 footer .container .icons a:hover {
   color: white;
+}
+
+@media screen and (max-width: 1050px) {
+  header nav.navegação div.mobile-menu {
+    display: block;
+  }
+  header nav.navegação div.mobile-menu .line {
+    width: 30px;
+    height: 3px;
+    background-color: white;
+  }
+  header nav.navegação ul.list-navegation {
+    display: none;
+  }
 }
 /*# sourceMappingURL=style.css.map */
