@@ -94,7 +94,7 @@ header{
     }
 }
 
-section.main{
+main{
     width: 100%;
     .container{
         display:grid;
@@ -102,6 +102,7 @@ section.main{
 
         .content-text,
         .content-image,
+        .content-image2,
         .content2{
             height: 80vh;
         }
@@ -142,42 +143,35 @@ section.main{
             background-size: cover;
         }
 
-        .content2{
+        .content2, .content2-2{
             background: url(/Site--sunnyside/images/desktop/image-graphic-design.jpg)no-repeat center center;
             background-size: cover;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+            display: flex; 
             justify-content: center;
-            padding-top: 30%;
             text-align: center;
-            h2{
-                font-size: 2rem;
-                padding-bottom: 20px;
-            }
-            p{
-                font-size: 1.3rem;
-                width: 50%
+            height:80vh;
+            width: 100%;
+            .wrapper-c2{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                position: relative;
+                top: 20%;
+                justify-content: center;
+                width: 40%;
+                h2{
+                    font-size: 2rem;
+                    padding-bottom: 20px;
+                }
+                p{
+                    font-size: 1.3rem;
+                }
             }
         }
         .content2-2{
             background: url(/Site--sunnyside/images/desktop/image-photography.jpg)no-repeat center center;
             background-size: cover;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            padding-top: 30%;
-            text-align: center;
-            h2{
-                font-size: 2rem;
-                padding-bottom: 20px;
-            }
-            p{
-                font-size: 1.3rem;
-                width: 40%
-                
-            }
+
         }
     }
 }
@@ -317,6 +311,25 @@ footer{
             ul.list-navegation{
                 display:none;
             }
+        }
+    }
+
+    main{
+        .container{
+            display:grid;
+            grid-template-columns: 1fr;
+    
+            .content-text{
+                padding-left: 0px;
+                align-items: center;
+                text-align: center;
+            }
+        }
+    }
+
+    section.images{
+        .container-imgs{
+            grid-template-columns: 1fr 1fr;
         }
     }
 }
