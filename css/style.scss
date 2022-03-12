@@ -298,6 +298,9 @@ footer{
 }
 
 @media screen and (max-width: 1050px){
+    body{
+        overflow-x:hidden;
+    }
     header{
         nav.navegação{
             div.mobile-menu{
@@ -308,10 +311,35 @@ footer{
                     background-color: white;
                 }
             }
-            ul.list-navegation{
-                display:none;
+            .list-navegation{
+                position: absolute;
+                top: 8vh;
+                right: 0;
+                width: 40vw;
+                height: 92vh;
+                background: $blue;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-around;
+                border-left: 3px solid white;
+                transform: translateX(100%);
+                transition: transform 0.3s ease-in;
+                li{
+                    padding-left: 0;
+                    opacity: 1;
+                    text-align: center;
+                }
             }
+            .list-navegation.active {
+                transform:translateX(0%);
+            }
+            
         }
+        .content-header{
+            h2{
+                font-size: 3rem;
+            }
+        }    
     }
 
     main{

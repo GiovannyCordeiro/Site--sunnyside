@@ -419,6 +419,9 @@ footer .container .icons a:hover {
 }
 
 @media screen and (max-width: 1050px) {
+  body {
+    overflow-x: hidden;
+  }
   header nav.navegação div.mobile-menu {
     display: block;
   }
@@ -427,8 +430,41 @@ footer .container .icons a:hover {
     height: 3px;
     background-color: white;
   }
-  header nav.navegação ul.list-navegation {
-    display: none;
+  header nav.navegação .list-navegation {
+    position: absolute;
+    top: 8vh;
+    right: 0;
+    width: 40vw;
+    height: 92vh;
+    background: #3ebfff;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    border-left: 3px solid white;
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+    -webkit-transition: -webkit-transform 0.3s ease-in;
+    transition: -webkit-transform 0.3s ease-in;
+    transition: transform 0.3s ease-in;
+    transition: transform 0.3s ease-in, -webkit-transform 0.3s ease-in;
+  }
+  header nav.navegação .list-navegation li {
+    padding-left: 0;
+    opacity: 1;
+    text-align: center;
+  }
+  header nav.navegação .list-navegation.active {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+  header .content-header h2 {
+    font-size: 3rem;
   }
   main .container {
     display: -ms-grid;
