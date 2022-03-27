@@ -309,6 +309,12 @@ footer{
                     width: 30px;
                     height: 3px;
                     background-color: white;
+                }         
+            }
+            ul.list-navegation{
+                display: flex;
+                li{
+                    padding-left: 0px;
                 }
             }
             .list-navegation{

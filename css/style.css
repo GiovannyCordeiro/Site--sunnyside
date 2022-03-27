@@ -1,13 +1,13 @@
 @charset "UTF-8";
+html {
+  scroll-behavior: smooth;
+}
+
 * {
   padding: 0;
   margin: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
 }
 
 a {
@@ -429,6 +429,14 @@ footer .container .icons a:hover {
     width: 30px;
     height: 3px;
     background-color: white;
+  }
+  header nav.navegação ul.list-navegation {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  header nav.navegação ul.list-navegation li {
+    padding-left: 0px;
   }
   header nav.navegação .list-navegation {
     position: absolute;
